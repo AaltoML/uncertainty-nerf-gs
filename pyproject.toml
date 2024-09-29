@@ -1,0 +1,35 @@
+[project]
+name = "nerfuncertainty"
+version = "0.1"
+
+dependencies=[
+    "torch>=2.0.0", # >=2.0.1
+    "torchvision>=0.15.1", # >=0.15.2
+    "nerfstudio>=0.3.4",
+    "torchtyping>=0.1.4",
+    "pytorch-laplace@git+https://github.com/frederikwarburg/pytorch-laplace.git",
+    "icecream", # for debugging
+    "gsplat>=0.1.11",
+]
+
+[tool.setuptools]
+packages = ["nerfuncertainty"]
+
+[project.entry-points.'nerfstudio.method_configs']
+dropout = 'nerfuncertainty.models.mcdropout.mcdropout_configs:NerfactoMCDropoutMethod'
+laplace_d = 'nerfuncertainty.models.laplace.laplace_config:NerfactoLaplaceMethod'
+activenerfacto = 'nerfuncertainty.models.activenerfacto.activenerfacto_config:ActiveNerfactoMethod'
+activesplatfacto = 'nerfuncertainty.models.activesplatfacto.activesplatfacto_config:ActiveSplatfactoMethod'
+
+[project.entry-points.'nerfstudio.dataparser_configs']
+sparse-nerfstudio = 'nerfuncertainty.dataparsers.sparse.sparse_nerfstudio_config:sparseNsDataparser'
+hh-blender = 'nerfuncertainty.dataparsers.hh_blender.hh_blender_config:hhBlenderDataparser'
+robustnerf = 'nerfuncertainty.dataparsers.robustnerf.robustnerf_config:robustnerfDataparser'
+sparse-blender = 'nerfuncertainty.dataparsers.sparse_blender.sparse_blender_config:sparseBlenderDataparser'
+blender-downscale = 'nerfuncertainty.dataparsers.blender_downscale.blender_downscale_config:blenderDownscaleDataparser'
+sparse-mipnerf360 = 'nerfuncertainty.dataparsers.sparse_mipnerf360.sparse_mipnerf360_config:sparseMipNerf360Dataparser'
+ood-mipnerf360 = 'nerfuncertainty.dataparsers.ood_mipnerf360.ood_mipnerf360_config:oodMipNerf360Dataparser'
+nerfonthego = 'nerfuncertainty.dataparsers.nerfonthego.nerfonthego_config:nerfOnTheGoDataparser'
+
+[project.scripts]
+ns-eval-unc = "nerfuncertainty.scripts.eval_uncertainty:entrypoint"

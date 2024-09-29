@@ -1,0 +1,5 @@
+
+from nerfstudio.plugins.registry_dataparser import DataParserSpecification
+from nerfuncertainty.dataparsers.nerfonthego.nerfonthego_dataparser import NerfOnTheGoDataParserConfig
+
+nerfOnTheGoDataparser = DataParserSpecification(config=NerfOnTheGoDataParserConfig())

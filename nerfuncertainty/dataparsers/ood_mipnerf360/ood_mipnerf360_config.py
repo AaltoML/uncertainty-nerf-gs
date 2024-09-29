@@ -1,0 +1,5 @@
+
+from nerfstudio.plugins.registry_dataparser import DataParserSpecification
+from nerfuncertainty.dataparsers.ood_mipnerf360.ood_mipnerf360_dataparser import OODMipNerf360DataParserConfig
+
+oodMipNerf360Dataparser = DataParserSpecification(config=OODMipNerf360DataParserConfig())
