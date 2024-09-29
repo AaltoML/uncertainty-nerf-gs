@@ -224,11 +224,13 @@ We recommend using argument `--unc-max` around 0.1-0.3 for capping the colored u
 If you use the code in this repository for your research, please cite the paper as follows:
 
 ```bibtex
-@article{klasson2024sources,
-  title={Sources of Uncertainty in 3D Scene Reconstruction},
-  author={Klasson, Marcus and Mereu, Riccardo and Kannala, Juho and Solin, Arno},
-  journal={arXiv preprint arXiv:2409.06407},
-  year={2024}
+@misc{klasson2024sources,
+      title={Sources of Uncertainty in 3D Scene Reconstruction}, 
+      author={Marcus Klasson and Riccardo Mereu and Juho Kannala and Arno Solin},
+      year={2024},
+      eprint={2409.06407},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
 }
 ```
 
