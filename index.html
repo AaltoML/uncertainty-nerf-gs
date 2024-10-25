@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,8 +12,9 @@
   <title>Sources of Uncertainty in 3D Scene Reconstruction</title>
 
 
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-        rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link href="./static/css/twentytwenty.css" rel="stylesheet" type="text/css" />
 
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
@@ -26,6 +30,8 @@
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.2.0/model-viewer.min.js"></script>
 </head>
 
 <body>
@@ -75,9 +81,11 @@
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
-      <div class="columns is-centered">
+      <div class="columns is-centered ">
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title">Sources of Uncertainty in 3D Scene Reconstruction</h1>
+
+          <h2 class="title is-4"> <a href="https://uncertainty-cv.github.io/2024/">ECCV 2024 Workshops</a> </h2>
 
           <div class="is-size-5 publication-authors">
             <span class="author-block">
@@ -110,6 +118,7 @@
                   <span>Paper</span>
                 </a>
               </span>
+              <!-- Arxiv Link. -->
               <span class="link-block">
                 <a href="https://arxiv.org/abs/2409.06407"
                    class="external-link button is-normal is-rounded is-dark">
@@ -119,18 +128,6 @@
                   <span>arXiv</span>
                 </a>
               </span>
-              <!-- Video Link. -->
-	      <!--
-              <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                  </span>
-                  <span>Video</span>
-                </a>
-              </span>
-	      -->
               <!-- Code Link. -->
               <span class="link-block">
                 <a href="https://github.com/AaltoML/uncertainty-nerf-gs"
@@ -141,20 +138,16 @@
                   <span>Code </span>
                   </a>
               </span>
-              <!-- Dataset Link. -->
-              <!--
-	      <span class="link-block">
-                <a href="https://github.com/google/nerfies/releases/tag/0.1"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="far fa-images"></i>
-                  </span>
-                  <span>Data</span>
-                  </a>
-                -->
             </div>
           </div>
-	      
+
+          <!-- TLDR. -->
+          <div class="column has-text-centered">
+            <p>
+              <strong>TLDR:</strong> We categorize various sources of uncertainties that can arise in 3D scene reconstruction with NeRFs and GS. 
+            </p>
+          </div>
+
         </div>
       </div>
     </div>
@@ -162,15 +155,18 @@
 </section>
 
 
+
+<!--Video-->
 <!--
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/teaser.mp4"
+      <video id="teaser" autoplay controls muted loop playsinline height="100%">
+        <source src="./static/videos/ood_garden/active-nerfacto/rgb_pred_std.mp4"
                 type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
+        Active-Nerfacto...
         <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
         free-viewpoint
         portraits.
@@ -179,6 +175,7 @@
   </div>
 </section>
 -->
+
 
 <!--
 <section class="hero is-light is-small">
@@ -240,12 +237,12 @@
 -->
 
 
-<section class="section">
+<section class="hero">
   <div class="container is-max-desktop">
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
+        <h2 class="title is-4">Abstract</h2>
 	
         <div class="content has-text-justified">
           <p>
@@ -254,25 +251,80 @@
             In this paper, we introduce a taxonomy that categorizes different sources of uncertainty inherent in these methods. 
             Moreover, we extend NeRF- and GS-based methods with uncertainty estimation techniques, including learning uncertainty outputs and ensembles, and perform an empirical study to assess their ability to capture the sensitivity of the reconstruction. 
             Our study highlights the need for addressing various uncertainty aspects when designing NeRF/GS-based methods for uncertainty-aware 3D reconstruction.
-            <!-- Website under construction. -->
           </p>
         </div>
       </div>
     </div>
-    <!--/ Abstract. -->
-    <!-- Paper video. -->
-    <!--
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+</section>
+
+<!--
+<section class="hero is-light is-small">
+  <div class="container hero-body">
+    <div class="columns is-centered">
+      <div class="column is-one-quarter-desktop has-text-centered">
+        <div class="twentytwenty-container twentytwenty-custom">
+          <img src="static/images/ood_garden/active-nerfacto/50_rgb_pred.png" alt="RGB">
+          <img src="static/images/ood_garden/active-nerfacto/50_rgb_unc.png" alt="Uncertainty">
+        </div>
+      </div>
+      <div class="column is-one-quarter-desktop has-text-centered">
+        <div class="twentytwenty-container twentytwenty-custom">
+          <img src="static/images/ood_garden/active-nerfacto/50_rgb_pred.png" alt="RGB">
+          <img src="static/images/ood_garden/active-nerfacto/50_rgb_unc.png" alt="Uncertainty">
+        </div>
+      </div>
+      <div class="column is-one-quarter-desktop has-text-centered">
+        <div class="twentytwenty-container twentytwenty-custom">
+          <img src="static/images/ood_garden/active-nerfacto/50_rgb_pred.png" alt="RGB">
+          <img src="static/images/ood_garden/active-nerfacto/50_rgb_unc.png" alt="Uncertainty">
+        </div>
+      </div>
+      <div class="column is-one-quarter-desktop has-text-centered">
+        <div class="twentytwenty-container twentytwenty-custom">
+          <img src="static/images/ood_garden/active-nerfacto/50_rgb_pred.png" alt="RGB">
+          <img src="static/images/ood_garden/active-nerfacto/50_rgb_unc.png" alt="Uncertainty">
         </div>
       </div>
     </div>
-    -->
-    <!--/ Paper video. -->
+  </div>
+</section>
+-->
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Centered title. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-4">Sources of Uncertainty in NeRF and GS</h2>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      
+      <!-- Sources. -->
+      <div class="column ">
+        <div class="content">
+          <p>We study four types of uncertainty associated with NeRF/GS methods: <br>
+            <ol>
+              <li> <strong>Irreducible uncertainty</strong>  (aleatoric), stemming from random effects in observations (inherent noise). </li>
+              <li><strong>Reducible uncertainty</strong> (epistemic), due to insufficient information in parts of the scene, which can be reduced by capturing data from new pose.; </li>
+              <li><strong>Confounding outliers</strong>, caused by non-static scenes, with elements such
+                as moving objects or vegetation, which lead to ambiguities like blur or hallucinations. </li>
+              <li><strong>Input uncertainty</strong>, which relates to sensitivity to camera poses and can be seen as the dual of reconstruction uncertainty, focusing on how changing inputs can reduce uncertainty or enhance quality. </li>
+            </ol>
+          </p>
+        </div>
+      </div>
+      <!-- Figure. -->
+      <div class="column ">
+        <div class="content">
+          <img src="static/images/sources.png" alt="Sources of uncertainty." width="75%"/>
+        </div>
+      </div>
+
+    </div>
   </div>
 </section>
 
@@ -426,7 +478,7 @@
 
   </div>
 </section>
--->
+
 
 <!-- Citation -->
 <section class="section" id="BibTeX">
@@ -445,17 +497,6 @@
 
 <footer class="footer">
   <div class="container">
-    <!--
-    <div class="content has-text-centered">
-      <a class="icon-link"
-         href="./static/videos/nerfies_paper.pdf">
-        <i class="fas fa-file-pdf"></i>
-      </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
-        <i class="fab fa-github"></i>
-      </a>
-    </div>
-    -->
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
@@ -465,19 +506,32 @@
 	    and is based on the <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a> site.
           </p>
           <!--
-	  <p>
+	        <p>
             This means you are free to borrow the <a
               href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
             we just ask that you link back to this page in the footer.
             Please remember to remove the analytics code included in the header of the website which
             you do not want on your website.
           </p>
-	  -->
+	        -->
         </div>
       </div>
     </div>
   </div>
 </footer>
+
+
+<!-- Bootstrap core JavaScript -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="./static/js/bootstrap.min.js"></script>
+<!-- <script src="/js/offcanvas.js"></script> -->
+<script src="./static/js/jquery.event.move.js"></script>
+<script src="./static/js/jquery.twentytwenty.js"></script>
+
+<script>
+  $(window).load(function () { $(".twentytwenty-container").twentytwenty({ default_offset_pct: 0.5 }); });
+</script>
+
 
 </body>
 </html>
