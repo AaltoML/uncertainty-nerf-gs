@@ -1,6 +1,6 @@
 # Sources of Uncertainty in 3D Scene Reconstruction 
 
-This branch (gh-pages) contains the source code for the website (and is based on [Nerfies](https://github.com/nerfies/nerfies.github.io)).
+This branch (gh-pages) contains the source code for the website and is based on the [Nerfies](https://github.com/nerfies/nerfies.github.io) and [DN-Splatter](https://maturk.github.io/dn-splatter/) .
 
 
 
