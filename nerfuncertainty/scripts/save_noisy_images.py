@@ -96,9 +96,9 @@ def process_images(input_folder, output_folder, operation, mean=0, std_dev=0.1, 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Apply Gaussian noise or Gaussian blur to images in a folder.")
-    parser.add_argument("input_folder", type=str, help="Path to the input folder containing JPG files")
-    parser.add_argument("output_folder", type=str, help="Path to the output folder where processed images will be saved")
-    parser.add_argument("operation", type=str, choices=['noise', 'blur'], help="Operation to perform: 'noise' or 'blur'")
+    parser.add_argument("--input_folder", type=str, help="Path to the input folder containing JPG files")
+    parser.add_argument("--output_folder", type=str, help="Path to the output folder where processed images will be saved")
+    parser.add_argument("--operation", type=str, choices=['noise', 'blur'], help="Operation to perform: 'noise' or 'blur'")
     parser.add_argument("--mean", type=float, default=0, help="Mean of the Gaussian noise (used if operation is 'noise')")
     parser.add_argument("--std_dev", type=float, default=0.1, help="Standard deviation of the Gaussian noise as a continuous value (used if operation is 'noise')")
     parser.add_argument("--kernel_size", type=int, default=5, help="Kernel size for Gaussian blur (used if operation is 'blur')")
