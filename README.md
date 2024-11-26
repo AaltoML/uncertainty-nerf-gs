@@ -2,7 +2,7 @@
 
 This repository is the official implementation of the methods in:
 
-* Marcus Klasson, Riccardo Mereu, Juho Kannala, and Arno Solin (2024). **Sources of Uncertainty in 3D Scene Reconstruction**. To appear in *ECCV 2024 Workshop on Uncertainty Quantification for Computer Vision*. [arXiv](https://arxiv.org/abs/2409.06407) [Project page](https://aaltoml.github.io/uncertainty-nerf-gs/)
+* Marcus Klasson, Riccardo Mereu, Juho Kannala, and Arno Solin (2024). **Sources of Uncertainty in 3D Scene Reconstruction**. In *ECCV 2024 Workshop on Uncertainty Quantification for Computer Vision*. [arXiv](https://arxiv.org/abs/2409.06407) [Project page](https://aaltoml.github.io/uncertainty-nerf-gs/)
 
 
 ## How to install `nerfstudio` environment
@@ -224,13 +224,12 @@ We recommend using argument `--unc-max` around 0.1-0.3 for capping the colored u
 If you use the code in this repository for your research, please cite the paper as follows:
 
 ```bibtex
-@misc{klasson2024sources,
+@inproceedings{klasson2024sources,
       title={Sources of Uncertainty in 3D Scene Reconstruction}, 
-      author={Marcus Klasson and Riccardo Mereu and Juho Kannala and Arno Solin},
+      author={Marcus Klasson and Riccardo Mereu and Juho Kannala and Arno Solin},,
+      booktitle={European Conference on Computer Vision Workshops},
       year={2024},
-      eprint={2409.06407},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
+      organization={Springer}
 }
 ```
 
