@@ -114,7 +114,7 @@ Recommend to use the `--experiment-name` argument and place methods with the sam
 
 First, we add confounding effects (gaussian noise or blur) to the training images
 ```bash
-python nerfuncertainty/scripts/save_noise_images.py --input-folder <path to > --output-folder <path where to save new images> --operation <'noise' or 'blur'> --std_dev <scale of gaussian noise (float)> --kernel_size <size of blur kernel (int)> 
+python nerfuncertainty/scripts/save_noisy_images.py --input_folder <path to > --output_folder <path where to save new images> --operation <'noise' or 'blur'> --std_dev <scale of gaussian noise (float)> --kernel_size <size of blur kernel (int)> 
 ```
 
 Run the following command:
