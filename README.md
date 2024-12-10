@@ -226,7 +226,7 @@ If you use the code in this repository for your research, please cite the paper 
 ```bibtex
 @inproceedings{klasson2024sources,
       title={Sources of Uncertainty in 3D Scene Reconstruction}, 
-      author={Marcus Klasson and Riccardo Mereu and Juho Kannala and Arno Solin},,
+      author={Marcus Klasson and Riccardo Mereu and Juho Kannala and Arno Solin},
       booktitle={European Conference on Computer Vision Workshops},
       year={2024},
       organization={Springer}
